@@ -1,0 +1,41 @@
+    <div class="person-info">
+      <div class="person-info-left">
+        {% if include.person.name %}
+          {% assign filepath=(include.person.name | slugify | prepend: "picture-" | append: ".filepath") %}
+          <img class="person-picture-{{ include.profile-picture-size }}" src="{% include {{ filepath }} %}"/>
+        {% endif %}
+      </div>
+      <div class="person-info-center">
+        {% if include.person.name %}
+          <span class="person-item">{{ include.person.name }}</span>
+        {% endif %}
+        {% if include.person.title %}
+          <span class="people-list-item">{{ include.person.title }}</span>
+        {% endif %}
+        {% if include.person.email %}
+          <div class="people-list-item">
+            {% include contact-email.html email=include.person.email icon-color=include.icon-color %}
+          </div>
+        {% endif %}
+        {% if include.person.twitter %}
+          <div class="people-list-item">
+            {% include contact-twitter.html twitter=include.person.twitter icon-color=include.icon-color %}
+          </div>
+        {% endif %}
+        {% if include.person.facebook %}
+          <div class="people-list-item">
+            {% include contact-facebook.html facebook=include.person.facebook icon-color=include.icon-color %}
+          </div>
+        {% endif %}
+        {% if include.person.ello %}
+          <div class="people-list-item">
+            {% include contact-ello.html ello=include.person.ello icon-color=include.icon-color %}
+          </div>
+        {% endif %}
+        {% if include.person.google-plus %}
+          <div class="people-list-item">
+            {% include contact-google-plus.html google-plus=include.person.google-plus icon-color=include.icon-color %}
+          </div>
+        {% endif %}
+      </div>
+    </div>

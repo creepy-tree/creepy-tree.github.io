@@ -1,0 +1,1 @@
+{{ "/images/ben_kern.png" | prepend: site.baseurl }}

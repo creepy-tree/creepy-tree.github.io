@@ -1,0 +1,60 @@
+# Main settings for the whole Creepy Tree site.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Creepy Tree Productions
+description: > # ignore newlines until indent ends.
+  Creepy Tree Productions is an independent game studio.
+  We make unsettling games with a focus on empathy.
+baseurl: "" 
+url: "http://creepy-tree.com"
+tracking-id: "UA-74982568-1"
+
+# Contact information
+# Each item may contain the following fields:
+# - name: Person's name
+# - title: Title the person holds at Creepy Tree
+# - show-in-footer: If set to true, will include
+#                   all contact info in the footer
+#                   of each page.
+# - email: Email address
+# - twitter: Twitter handle (without @)
+# - facebook: Facebook page
+# - ello: Ello user name
+# - google-plus: Google+ name
+# - bio: Short biography
+people:
+  - name: Ben Kern
+    title: Owner and Developer
+    show-in-footer: true
+    email: ben.kern@creepy-tree.com
+    twitter: BenjaminLKern
+    facebook: BenjaminLKern
+    ello: benkern
+    google-plus: BenjaminKern
+    bio: >
+      Ben Kern is the owner of Creepy Tree Productions.
+      He is also the primary designer, developer, artist,
+      writer, and musician.
+
+contact:
+  email: contact@creepy-tree.com
+  twitter: Creepy_Tree
+
+webmaster:
+  email: webmaster@creepy-tree.com
+
+icon-color: "#878787"
+
+# Build settings
+markdown: kramdown
+
+feed:
+  path: atom.xml
+
+gems:
+  - jemoji
+  - jekyll-feed
+  - jekyll-sitemap

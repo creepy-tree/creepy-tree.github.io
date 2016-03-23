@@ -1,0 +1,19 @@
+  <div class="person-info">
+    <div class="person-info-left">
+      {% if include.person.name %}
+        {% assign filepath=(include.person.name | slugify | prepend: "picture-" | append: ".filepath") %}
+        <img class="person-picture-large" src="{% include {{ filepath }} %}"/>
+      {% endif %}
+    </div>
+    <div class="person-info-center">
+      {% if include.person.name %}
+        <span class="people-list-item">{{ include.person.name }}</span>
+      {% endif %}
+      {% if include.person.title %}
+        <span class="people-list-item">{{ include.person.title }}</span>
+      {% endif %}
+    </div>
+    </div>
+
+    {: .person-bio }
+    {{ person.bio }}

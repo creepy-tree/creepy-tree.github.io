@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="people-list">
+          <li style="margin-bottom: 2em;">
+            {% include contact.html person=site.contact icon-color=site.icon-color %}
+          </li>
+		  {% if false %}
+		  {% assign filtered-people=(site.people | where:"show-in-footer","true")%}
+          {% for person in filtered-people %}
+            <li>
+              {% include contact.html person=person profile-picture-size="small" icon-color=site.icon-color %}
+            </li>
+          {% endfor %}
+		  {% endif %}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="footer-col footer-col-3">
+        {% include image-creepy-tree.html %}
+      </div>
+    </div>
+    <div class="footer-col-wrapper">
+      <div class="footer-col">Copyright © {{ site.time | date: "%Y" }} {{ site.title }}</div>
+    </div>
+  </div>
+</footer>
